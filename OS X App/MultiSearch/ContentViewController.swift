@@ -56,6 +56,7 @@ class ContentViewController: NSSplitViewController {
         let iDict = NSTabViewItem(viewController: frameDict)
         iDict.label = "Wiktionary"
         tabVC.addTabViewItem(iDict)
+        tabVC.selectedTabViewItemIndex = 0  // hack to get the view loaded
         let miDict = NSMenuItem(title: "Wiktionary", action: Selector("switchToTab:"), keyEquivalent: "1")
         miDict.target = self
         viewMenu?.addItem(miDict)
@@ -64,6 +65,7 @@ class ContentViewController: NSSplitViewController {
         let iHanzi = NSTabViewItem(viewController: frameHanzi)
         iHanzi.label = "HanziCraft"
         tabVC.addTabViewItem(iHanzi)
+        tabVC.selectedTabViewItemIndex = 1  // hack to get the view loaded
         let miHanzi = NSMenuItem(title: "HanziCraft", action: Selector("switchToTab:"), keyEquivalent: "2")
         miHanzi.target = self
         viewMenu?.addItem(miHanzi)
@@ -72,11 +74,14 @@ class ContentViewController: NSSplitViewController {
         let iForvo = NSTabViewItem(viewController: frameForvo)
         iForvo.label = "Forvo"
         tabVC.addTabViewItem(iForvo)
+        tabVC.selectedTabViewItemIndex = 2  // hack to get the view loaded
         let miForvo = NSMenuItem(title: "Forvo", action: Selector("switchToTab:"), keyEquivalent: "3")
         miForvo.target = self
         viewMenu?.addItem(miForvo)
         
         viewMenu?.addItem(NSMenuItem.separatorItem())
+        
+        tabVC.selectedTabViewItemIndex = 0
     }
     
     func loadQuery(query:String) {
