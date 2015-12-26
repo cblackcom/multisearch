@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A20A4CA1C2E370E003EBFC4 /* WebPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A20A4C81C2E370E003EBFC4 /* WebPane.xib */; };
+		3A20A4CB1C2E370E003EBFC4 /* WebPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */; };
+		3A20A4D21C2E3728003EBFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */; };
+		3A20A4D31C2E3728003EBFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */; };
+		3A20A4D41C2E3728003EBFC4 /* ContentSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */; };
+		3A20A4D61C2E3728003EBFC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */; };
+		3A20A4D71C2E3728003EBFC4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */; };
+		3AD0028C1C0B6ABE00189108 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD0028B1C0B6ABE00189108 /* WebKit.framework */; };
+		3AD002941C0B705600189108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD002931C0B705600189108 /* Foundation.framework */; };
+		3AD002951C0B70E600189108 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD002911C0B6E4000189108 /* AppKit.framework */; };
+		3AF4C6DC1C2E377D000E1279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF4C6DA1C2E377D000E1279 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A20A4C81C2E370E003EBFC4 /* WebPane.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebPane.xib; path = MultiSearch/WebPane.xib; sourceTree = SOURCE_ROOT; };
+		3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebPaneView.swift; path = MultiSearch/WebPaneView.swift; sourceTree = SOURCE_ROOT; };
+		3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MultiSearch/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MultiSearch/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentSplitViewController.swift; path = MultiSearch/ContentSplitViewController.swift; sourceTree = SOURCE_ROOT; };
+		3A20A4CF1C2E3728003EBFC4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MultiSearch/Info.plist; sourceTree = SOURCE_ROOT; };
+		3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MultiSearch/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = MultiSearch/WebViewController.swift; sourceTree = SOURCE_ROOT; };
+		3AD002791C0B67D500189108 /* MultiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD0028B1C0B6ABE00189108 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3AD002911C0B6E4000189108 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3AD002931C0B705600189108 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AF4C6DB1C2E377D000E1279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MultiSearch/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AD002761C0B67D500189108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD002951C0B70E600189108 /* AppKit.framework in Frameworks */,
+				3AD002941C0B705600189108 /* Foundation.framework in Frameworks */,
+				3AD0028C1C0B6ABE00189108 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AD002701C0B67D500189108 = {
+			isa = PBXGroup;
+			children = (
+				3AD002931C0B705600189108 /* Foundation.framework */,
+				3AD002911C0B6E4000189108 /* AppKit.framework */,
+				3AD0028B1C0B6ABE00189108 /* WebKit.framework */,
+				3AD0027B1C0B67D500189108 /* MultiSearch */,
+				3AD0027A1C0B67D500189108 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AD0027A1C0B67D500189108 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AD002791C0B67D500189108 /* MultiSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AD0027B1C0B67D500189108 /* MultiSearch */ = {
+			isa = PBXGroup;
+			children = (
+				3AF4C6DA1C2E377D000E1279 /* Main.storyboard */,
+				3AD0029E1C0B809000189108 /* Deprecated */,
+				3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */,
+				3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */,
+				3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */,
+				3A20A4CF1C2E3728003EBFC4 /* Info.plist */,
+				3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */,
+				3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */,
+			);
+			name = MultiSearch;
+			path = "Character Tool";
+			sourceTree = "<group>";
+		};
+		3AD0029E1C0B809000189108 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				3A20A4C81C2E370E003EBFC4 /* WebPane.xib */,
+				3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */,
+			);
+			name = Deprecated;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AD002781C0B67D500189108 /* MultiSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD002881C0B67D500189108 /* Build configuration list for PBXNativeTarget "MultiSearch" */;
+			buildPhases = (
+				3AD002751C0B67D500189108 /* Sources */,
+				3AD002761C0B67D500189108 /* Frameworks */,
+				3AD002771C0B67D500189108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiSearch;
+			productName = "Character Tool";
+			productReference = 3AD002791C0B67D500189108 /* MultiSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AD002711C0B67D500189108 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = CBlack;
+				TargetAttributes = {
+					3AD002781C0B67D500189108 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3AD002741C0B67D500189108 /* Build configuration list for PBXProject "MultiSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AD002701C0B67D500189108;
+			productRefGroup = 3AD0027A1C0B67D500189108 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AD002781C0B67D500189108 /* MultiSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AD002771C0B67D500189108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A20A4CA1C2E370E003EBFC4 /* WebPane.xib in Resources */,
+				3A20A4D31C2E3728003EBFC4 /* Assets.xcassets in Resources */,
+				3AF4C6DC1C2E377D000E1279 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AD002751C0B67D500189108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A20A4D21C2E3728003EBFC4 /* AppDelegate.swift in Sources */,
+				3A20A4D71C2E3728003EBFC4 /* WebViewController.swift in Sources */,
+				3A20A4D41C2E3728003EBFC4 /* ContentSplitViewController.swift in Sources */,
+				3A20A4CB1C2E370E003EBFC4 /* WebPaneView.swift in Sources */,
+				3A20A4D61C2E3728003EBFC4 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AF4C6DA1C2E377D000E1279 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AF4C6DB1C2E377D000E1279 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AD002861C0B67D500189108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AD002871C0B67D500189108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3AD002891C0B67D500189108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/MultiSearch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cblack.MultiSearch;
+				PRODUCT_NAME = MultiSearch;
+			};
+			name = Debug;
+		};
+		3AD0028A1C0B67D500189108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/MultiSearch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cblack.MultiSearch;
+				PRODUCT_NAME = MultiSearch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AD002741C0B67D500189108 /* Build configuration list for PBXProject "MultiSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD002861C0B67D500189108 /* Debug */,
+				3AD002871C0B67D500189108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD002881C0B67D500189108 /* Build configuration list for PBXNativeTarget "MultiSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD002891C0B67D500189108 /* Debug */,
+				3AD0028A1C0B67D500189108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AD002711C0B67D500189108 /* Project object */;
+}
