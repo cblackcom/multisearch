@@ -25,11 +25,17 @@
 
 import Cocoa
 
-class ContentViewController: NSTabViewController {
+class ContentViewController: NSSplitViewController {
+    
+    var viewMenu:NSMenu?
     
     var frameImage:WebViewController!
+    
+    var tabVC:NSTabViewController!
+    
     var frameDict:WebViewController!
     var frameHanzi:WebViewController!
+    var frameForvo:WebViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +44,39 @@ class ContentViewController: NSTabViewController {
         // http://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift
         
         frameImage = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
-        let sviImage = NSTabViewItem(viewController: frameImage)
-        self.addTabViewItem(sviImage)
+        self.addSplitViewItem(NSSplitViewItem(viewController: frameImage))
+        
+        tabVC = self.storyboard?.instantiateControllerWithIdentifier("tabViewController") as! NSTabViewController
+        self.addSplitViewItem(NSSplitViewItem(viewController: tabVC))
+        
+        viewMenu = NSApplication.sharedApplication().mainMenu?.itemWithTitle("View")?.submenu
+        viewMenu?.autoenablesItems = false
         
         frameDict = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
-        let sviDict = NSTabViewItem(viewController: frameDict)
-        self.addTabViewItem(sviDict)
+        let iDict = NSTabViewItem(viewController: frameDict)
+        iDict.label = "Wiktionary"
+        tabVC.addTabViewItem(iDict)
+        let miDict = NSMenuItem(title: "Wiktionary", action: Selector("switchToTab:"), keyEquivalent: "1")
+        miDict.target = self
+        viewMenu?.addItem(miDict)
         
         frameHanzi = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
-        let sviHanzi = NSTabViewItem(viewController: frameHanzi)
-        self.addTabViewItem(sviHanzi)
+        let iHanzi = NSTabViewItem(viewController: frameHanzi)
+        iHanzi.label = "HanziCraft"
+        tabVC.addTabViewItem(iHanzi)
+        let miHanzi = NSMenuItem(title: "HanziCraft", action: Selector("switchToTab:"), keyEquivalent: "2")
+        miHanzi.target = self
+        viewMenu?.addItem(miHanzi)
+        
+        frameForvo = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
+        let iForvo = NSTabViewItem(viewController: frameForvo)
+        iForvo.label = "Forvo"
+        tabVC.addTabViewItem(iForvo)
+        let miForvo = NSMenuItem(title: "Forvo", action: Selector("switchToTab:"), keyEquivalent: "3")
+        miForvo.target = self
+        viewMenu?.addItem(miForvo)
+        
+        viewMenu?.addItem(NSMenuItem.separatorItem())
     }
     
     func loadQuery(query:String) {
@@ -57,5 +86,13 @@ class ContentViewController: NSTabViewController {
         frameImage.loadURLString("http://images.google.com.tw/search?q=" + escapedQuery + "&sout=1&tbm=isch")
         frameDict.loadURLString("https://en.wiktionary.org/wiki/" + escapedQuery)
         frameHanzi.loadURLString("http://www.hanzicraft.com/character/" + escapedQuery)
+        frameForvo.loadURLString("http://forvo.com/word/" + escapedQuery + "/#zh")
     }
+    
+    func switchToTab(mi:NSMenuItem?) {
+        if let mi = mi, viewMenu = viewMenu {
+            tabVC.selectedTabViewItemIndex = viewMenu.indexOfItem(mi)
+        }
+    }
+    
 }

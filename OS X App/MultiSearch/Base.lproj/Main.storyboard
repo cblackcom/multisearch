@@ -583,22 +583,7 @@
                             </menuItem>
                             <menuItem title="View" id="H8h-7b-M4v">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="View" id="HyV-fh-RgO">
-                                    <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
+                                <menu key="submenu" title="View" id="HyV-fh-RgO"/>
                             </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -671,11 +656,11 @@
             <objects>
                 <viewController id="B8U-od-XEL" customClass="MainViewController" customModule="MultiSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="tPm-Zb-WY0">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1400" height="900"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ime-OO-usl">
-                                <rect key="frame" x="20" y="647" width="1240" height="53"/>
+                                <rect key="frame" x="20" y="827" width="1360" height="53"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="o4f-9o-0cK">
                                     <font key="font" metaFont="system" size="40"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -686,9 +671,9 @@
                                 </connections>
                             </textField>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="nIS-n4-Ea3">
-                                <rect key="frame" x="0.0" y="0.0" width="1280" height="627"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1400" height="807"/>
                                 <connections>
-                                    <segue destination="zmP-CU-xkT" kind="embed" identifier="splitEmbedSegue" id="hmj-O8-b3q"/>
+                                    <segue destination="yDt-fe-uHe" kind="embed" identifier="splitEmbedSegue" id="rvh-x6-pBf"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -712,19 +697,32 @@
             <point key="canvasLocation" x="78" y="753"/>
         </scene>
         <!--Content View Controller-->
-        <scene sceneID="rbF-MQ-Mce">
+        <scene sceneID="aa8-DK-nLq">
             <objects>
-                <tabViewController id="zmP-CU-xkT" customClass="ContentViewController" customModule="MultiSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabView key="tabView" type="noTabsNoBorder" id="hhU-0N-zVS">
+                <splitViewController id="yDt-fe-uHe" customClass="ContentViewController" customModule="MultiSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="vGN-wM-UQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                </splitViewController>
+                <customObject id="7hl-GS-89y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="1953"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="UF3-hG-uXo">
+            <objects>
+                <tabViewController storyboardIdentifier="tabViewController" id="zSQ-q5-G5g" sceneMemberID="viewController">
+                    <tabView key="tabView" type="noTabsNoBorder" id="vDc-Wd-9uc">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                     </tabView>
                 </tabViewController>
-                <customObject id="e7f-pT-BNr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="4fF-UF-tDQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="1434"/>
+            <point key="canvasLocation" x="177" y="1945"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="iwH-Aa-WXx">
@@ -754,7 +752,7 @@
                 </viewController>
                 <customObject id="ngG-zq-qsr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="1399"/>
+            <point key="canvasLocation" x="747" y="1945"/>
         </scene>
     </scenes>
 </document>
