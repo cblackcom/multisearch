@@ -36,7 +36,7 @@ class WebViewController: NSViewController {
     }
     
     func loadURLString(url:String) {
-        webView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
+        webView?.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
     }
     
 }

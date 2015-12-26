@@ -27,7 +27,7 @@ import Cocoa
 
 class MainViewController: NSViewController {
     
-    var splitVC:ContentSplitViewController?
+    var contentVC:ContentViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class MainViewController: NSViewController {
     // http://stackoverflow.com/questions/13279105/access-container-view-controller-from-parent-ios
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "splitEmbedSegue" {
-            splitVC = segue.destinationController as? ContentSplitViewController
+            contentVC = segue.destinationController as? ContentViewController
         }
     }
 
@@ -51,7 +51,7 @@ class MainViewController: NSViewController {
     
     @IBAction func querySubmit(sender: AnyObject) {
         //print("it is " + queryField.stringValue)
-        splitVC?.loadQuery(queryField.stringValue)
+        contentVC?.loadQuery(queryField.stringValue)
     }
 }
 

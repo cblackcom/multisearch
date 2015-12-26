@@ -1,5 +1,5 @@
 //
-//  ContentSplitViewController.swift
+//  ContentViewController.swift
 //  MultiSearch
 //
 //  Copyright © 2015 Colin Black (http://cblack.com)
@@ -25,27 +25,29 @@
 
 import Cocoa
 
-class ContentSplitViewController: NSSplitViewController {
+class ContentViewController: NSTabViewController {
     
     var frameImage:WebViewController!
     var frameDict:WebViewController!
+    var frameHanzi:WebViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
         
         // http://spin.atomicobject.com/2015/07/21/ios-container-views/
         // http://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift
         
         frameImage = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
-        let sviImage = NSSplitViewItem(viewController: frameImage)
-        self.addSplitViewItem(sviImage)
+        let sviImage = NSTabViewItem(viewController: frameImage)
+        self.addTabViewItem(sviImage)
         
         frameDict = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
-        let sviDict = NSSplitViewItem(viewController: frameDict)
-        self.addSplitViewItem(sviDict)
+        let sviDict = NSTabViewItem(viewController: frameDict)
+        self.addTabViewItem(sviDict)
         
-        //loadQuery("黑")
+        frameHanzi = self.storyboard?.instantiateControllerWithIdentifier("webViewController") as! WebViewController
+        let sviHanzi = NSTabViewItem(viewController: frameHanzi)
+        self.addTabViewItem(sviHanzi)
     }
     
     func loadQuery(query:String) {
@@ -54,5 +56,6 @@ class ContentSplitViewController: NSSplitViewController {
         let escapedQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         frameImage.loadURLString("http://images.google.com.tw/search?q=" + escapedQuery + "&sout=1&tbm=isch")
         frameDict.loadURLString("https://en.wiktionary.org/wiki/" + escapedQuery)
+        frameHanzi.loadURLString("http://www.hanzicraft.com/character/" + escapedQuery)
     }
 }

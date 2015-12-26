@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A20A4CA1C2E370E003EBFC4 /* WebPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A20A4C81C2E370E003EBFC4 /* WebPane.xib */; };
-		3A20A4CB1C2E370E003EBFC4 /* WebPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */; };
 		3A20A4D21C2E3728003EBFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */; };
 		3A20A4D31C2E3728003EBFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */; };
-		3A20A4D41C2E3728003EBFC4 /* ContentSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */; };
+		3A20A4D41C2E3728003EBFC4 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4CE1C2E3728003EBFC4 /* ContentViewController.swift */; };
 		3A20A4D61C2E3728003EBFC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */; };
 		3A20A4D71C2E3728003EBFC4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */; };
 		3AD0028C1C0B6ABE00189108 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD0028B1C0B6ABE00189108 /* WebKit.framework */; };
@@ -21,11 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A20A4C81C2E370E003EBFC4 /* WebPane.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebPane.xib; path = MultiSearch/WebPane.xib; sourceTree = SOURCE_ROOT; };
-		3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebPaneView.swift; path = MultiSearch/WebPaneView.swift; sourceTree = SOURCE_ROOT; };
 		3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MultiSearch/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MultiSearch/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentSplitViewController.swift; path = MultiSearch/ContentSplitViewController.swift; sourceTree = SOURCE_ROOT; };
+		3A20A4CE1C2E3728003EBFC4 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewController.swift; path = MultiSearch/ContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		3A20A4CF1C2E3728003EBFC4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MultiSearch/Info.plist; sourceTree = SOURCE_ROOT; };
 		3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MultiSearch/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = MultiSearch/WebViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -72,26 +68,16 @@
 		3AD0027B1C0B67D500189108 /* MultiSearch */ = {
 			isa = PBXGroup;
 			children = (
-				3AF4C6DA1C2E377D000E1279 /* Main.storyboard */,
-				3AD0029E1C0B809000189108 /* Deprecated */,
 				3A20A4CC1C2E3728003EBFC4 /* AppDelegate.swift */,
 				3A20A4CD1C2E3728003EBFC4 /* Assets.xcassets */,
-				3A20A4CE1C2E3728003EBFC4 /* ContentSplitViewController.swift */,
+				3A20A4CE1C2E3728003EBFC4 /* ContentViewController.swift */,
 				3A20A4CF1C2E3728003EBFC4 /* Info.plist */,
+				3AF4C6DA1C2E377D000E1279 /* Main.storyboard */,
 				3A20A4D01C2E3728003EBFC4 /* MainViewController.swift */,
 				3A20A4D11C2E3728003EBFC4 /* WebViewController.swift */,
 			);
 			name = MultiSearch;
 			path = "Character Tool";
-			sourceTree = "<group>";
-		};
-		3AD0029E1C0B809000189108 /* Deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				3A20A4C81C2E370E003EBFC4 /* WebPane.xib */,
-				3A20A4C91C2E370E003EBFC4 /* WebPaneView.swift */,
-			);
-			name = Deprecated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +138,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A20A4CA1C2E370E003EBFC4 /* WebPane.xib in Resources */,
 				3A20A4D31C2E3728003EBFC4 /* Assets.xcassets in Resources */,
 				3AF4C6DC1C2E377D000E1279 /* Main.storyboard in Resources */,
 			);
@@ -167,8 +152,7 @@
 			files = (
 				3A20A4D21C2E3728003EBFC4 /* AppDelegate.swift in Sources */,
 				3A20A4D71C2E3728003EBFC4 /* WebViewController.swift in Sources */,
-				3A20A4D41C2E3728003EBFC4 /* ContentSplitViewController.swift in Sources */,
-				3A20A4CB1C2E370E003EBFC4 /* WebPaneView.swift in Sources */,
+				3A20A4D41C2E3728003EBFC4 /* ContentViewController.swift in Sources */,
 				3A20A4D61C2E3728003EBFC4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

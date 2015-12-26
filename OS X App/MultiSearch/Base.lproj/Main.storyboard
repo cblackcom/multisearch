@@ -688,7 +688,7 @@
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="nIS-n4-Ea3">
                                 <rect key="frame" x="0.0" y="0.0" width="1280" height="627"/>
                                 <connections>
-                                    <segue destination="dOE-ny-E39" kind="embed" identifier="splitEmbedSegue" id="ZAV-Ey-ePa"/>
+                                    <segue destination="zmP-CU-xkT" kind="embed" identifier="splitEmbedSegue" id="hmj-O8-b3q"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -711,31 +711,20 @@
             </objects>
             <point key="canvasLocation" x="78" y="753"/>
         </scene>
-        <!--Page Controller-->
-        <scene sceneID="jxH-k7-eqE">
+        <!--Content View Controller-->
+        <scene sceneID="rbF-MQ-Mce">
             <objects>
-                <pagecontroller id="bM4-xs-Rjg" sceneMemberID="viewController">
-                    <view key="view" id="Xqh-u3-A3Z">
+                <tabViewController id="zmP-CU-xkT" customClass="ContentViewController" customModule="MultiSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabView key="tabView" type="noTabsNoBorder" id="hhU-0N-zVS">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </pagecontroller>
-                <customObject id="3o2-6H-u7H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                </tabViewController>
+                <customObject id="e7f-pT-BNr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-502" y="1426"/>
-        </scene>
-        <!--Content Split View Controller-->
-        <scene sceneID="UOl-ly-r8X">
-            <objects>
-                <splitViewController id="dOE-ny-E39" customClass="ContentSplitViewController" customModule="MultiSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="o2g-BJ-32H">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </splitView>
-                </splitViewController>
-                <customObject id="4nZ-D0-Opb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="78" y="1434"/>
+            <point key="canvasLocation" x="-413" y="1434"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="iwH-Aa-WXx">
